@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .flex-item {
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 50px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,9 @@
+<h3 class="title1" *ngIf="hasRoute('/yourBicycles')" class="title1">BICYCLES</h3>
+<h3 class="title2">YOUR BICYCLES</h3>
+<div class="container">
+  <!-- render a list of images -->
+  <div class="col-container" *ngFor="let bicycle of yourBicycles">
+      <img class="bikeImg" src="{{ bicycle.imgUri }}" alt="image" />
+      <p class="text">{{ bicycle.name }}</p>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.title {
+    font-family: Avenir Next;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 11%;
+    margin-bottom: 10px;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2% 11%
+  }
+  
+  .item {
+      width: 40%;
+  }

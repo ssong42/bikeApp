@@ -1,0 +1,55 @@
+.title1 {
+  font-family: Avenir Next;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-left: 11%;
+  margin-bottom: 36px;
+}
+
+.title2 {
+  font-family: Avenir Next;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-left: 11%;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 11%;
+  margin-right: 11%;
+  gap: 10%
+}
+
+.col-container {
+  width: 45%;
+}
+
+.bikeImg {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 50px 125px;
+  width: 50%;
+}
+
+.text {
+  font-family: Avenir Next;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 30px;
+}

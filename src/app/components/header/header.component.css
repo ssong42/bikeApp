@@ -1,0 +1,33 @@
+h2 {
+  font-family: Avenir Next;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+a {
+  font-family: Avenir Next;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  margin: 25px;
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+header {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: white;
+}

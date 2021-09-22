@@ -1,0 +1,86 @@
+.hero-image {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner.png");
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  color: white;
+  padding-top: 110px;
+  font-family: Avenir Next;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0.1em;
+}
+
+.hero-text-main {
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0.1em;
+  margin-bottom: 0px;
+}
+
+.hero-text-sub {
+  margin-top: 0px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.aboutUsTitle {
+  font-family: Avenir Next;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  font-weight: 650;
+  opacity: 40%;
+  margin-bottom: 0px;
+}
+
+.aboutUsQuestion {
+  font-family: Avenir Next;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 0px;
+}
+
+.aboutUsText {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.aboutUsContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.aboutUsChild {
+  width: 40%; 
+}
+
+.aboutUsImage {
+  border-radius: 15px;
+}

@@ -1,0 +1,1 @@
+export const text: string = 'We know how annoying it is to get parts for your bike and find out that they aren’t compatible. With Cyclebuild, we hope to make it easier for you to make sure you get the parts you want and avoid any compatibility issues.';

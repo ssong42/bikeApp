@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="item">
+    <carousel
+      [images]="part.images"
+      [cellsToShow]="1"
+      [width]="450"
+      [height]="300"
+    >
+    </carousel>
+  </div>
+  <div class="item">
+    <h3 class="title">{{ part.name }}</h3>
+    <app-button
+      color="#36A0ED"
+      text="Add To Vehicle"
+      (click)="openDialog()"
+    ></app-button>
+    <hr class="solid" />
+    <p class="description">{{ part.description }}</p>
+    <hr class="solid" />
+    <h3 class="title">Compatibility</h3>
+    <ul class="compatibility" *ngFor="let bikes of part.compatibleBikes">
+      <li>{{ bikes.name }}</li>
+    </ul>
+  </div>
+</div>
