@@ -1,12 +1,6 @@
 <div class="container">
   <div class="item">
-    <carousel
-      [images]="part.images"
-      [cellsToShow]="1"
-      [width]="450"
-      [height]="300"
-    >
-    </carousel>
+    <app-carousel [slides]="part.images"></app-carousel>
   </div>
   <div class="item">
     <h3 class="title">{{ part.name }}</h3>

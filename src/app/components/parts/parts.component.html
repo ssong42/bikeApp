@@ -2,11 +2,11 @@
 <h3 *ngIf="!hasRoute('/')" class="title2">PARTS</h3>
 <div class="container">
   <!-- TODO: render a list of images -->
-  <div class="row-container" *ngFor="let part of parts">
+  <div class="row-container" *ngFor="let part of parts$ | async">
     <a [routerLink]="['/parts', part.id]" class="imgOutline container">
       <img class="partImg" src="{{ part.images[0].path }}" alt="image" />
     </a>
     <p class="text">{{ part.name }}</p>
   </div>
 </div>
-<div style="margin-bottom: 50px"></div>
+<div style="height: 50px"></div>

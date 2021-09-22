@@ -1,3 +1,9 @@
+export interface Bicycles {
+    id: number,
+    name: string,
+    imgUri: any
+}
+
 export const bicycles: any = [
 {
     id: "1",

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { parts } from 'src/app/mock-parts';
+import { Part } from 'src/app/mock-parts';
 import { Router } from '@angular/router';
+import { PartsService } from 'src/app/services/parts.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-parts',
@@ -8,9 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./parts.component.css']
 })
 export class PartsComponent implements OnInit {
-  parts = parts;
+  parts$: Observable<Part[]>;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private partService: PartsService) { 
+    this.parts$ = this.partService.parts$;
+  }
 
   ngOnInit(): void {
   }

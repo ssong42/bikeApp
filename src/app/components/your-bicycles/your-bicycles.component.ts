@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { bicycles } from 'src/app/mock-bicycles';
+import { Observable } from 'rxjs';
+import { Bicycles } from 'src/app/mock-bicycles';
+import { BicyclesService } from 'src/app/services/bicycles.service';
 
 @Component({
   selector: 'app-your-bicycles',
@@ -8,9 +10,11 @@ import { bicycles } from 'src/app/mock-bicycles';
   styleUrls: ['./your-bicycles.component.css']
 })
 export class YourBicyclesComponent implements OnInit {
-  yourBicycles = bicycles;
+  yourBicycles$: Observable<Bicycles[]>;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private bicyclesService: BicyclesService) { 
+    this.yourBicycles$ = this.bicyclesService.bicycles$;
+  }
 
   ngOnInit(): void {
   }

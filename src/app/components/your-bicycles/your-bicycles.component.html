@@ -2,7 +2,7 @@
 <h3 class="title2">YOUR BICYCLES</h3>
 <div class="container">
   <!-- render a list of images -->
-  <div class="col-container" *ngFor="let bicycle of yourBicycles">
+  <div class="col-container" *ngFor="let bicycle of yourBicycles$ | async">
       <img class="bikeImg" src="{{ bicycle.imgUri }}" alt="image" />
       <p class="text">{{ bicycle.name }}</p>
   </div>

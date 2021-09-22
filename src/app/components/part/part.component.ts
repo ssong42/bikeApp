@@ -11,7 +11,7 @@ import { ModalComponent} from '../modal/modal.component'
 })
 export class PartComponent implements OnInit {
   part: any;
-  partId = 0;
+  partId = 1;
 
   constructor(private route: ActivatedRoute, public dialog: MatDialog) {}
 
@@ -24,7 +24,9 @@ export class PartComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(ModalComponent);
+    const dialogRef = this.dialog.open(ModalComponent, {
+      data: {part : this.part}
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

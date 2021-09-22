@@ -1,4 +1,4 @@
-interface Part {
+export interface Part {
     id: number,
     name: string,
     images: any[],
@@ -10,7 +10,7 @@ export const parts: Part[] = [
     {
         id: 1,
         name: "Part A",
-        images: [{path: "/assets/AkrapovicExhaust.svg"}, {path: "/assets/AkrapovicExhaust.svg"}],
+        images: [{path: "/assets/AkrapovicExhaust.svg"}, {path: "/assets/SupraSuspensionImage.svg"}],
         description: "A seatpost wedge compatible with the 2019 S3 Rim and Disc models.",
         compatibleBikes: [{id: 1, name: "Bicycle A"}]
     },
