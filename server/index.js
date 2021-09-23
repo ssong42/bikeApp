@@ -1,6 +1,5 @@
 const Hapi = require("@hapi/hapi");
 const Joi = require("@hapi/joi");
-const { Console } = require("console");
 const Mongoose = require("mongoose");
 
 Mongoose.connect(
