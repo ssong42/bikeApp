@@ -39,15 +39,30 @@
       ]
     }
   ],
-  "bicycles": [{
-    "id": "1",
-    "name": "Bicycle A",
-    "imgUri": "/assets/yourBike1.png"
-},
-{
-    "id": "2",
-    "name": "Bicycle B",
-    "imgUri": "/assets/yourBike2.png"
-}],
-  "myBicycles": { "name": "typicode" }
+  "bicycles": [
+    {
+      "id": "1",
+      "name": "Bicycle A",
+      "images": [
+        "/assets/yourBike1.png"
+      ],
+      "parts": [
+        {
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Bicycle B",
+      "images": [
+        "/assets/yourBike2.png"
+      ],
+      "parts": [
+        {
+          "id": 2
+        }
+      ]
+    }
+  ]
 }

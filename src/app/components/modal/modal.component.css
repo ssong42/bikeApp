@@ -1,5 +1,28 @@
-.test {
-  display: flex;
+.margins {
+  margin-top: 15px;
+  margin: 0 3%;
+}
+
+.title {
+  font-family: Avenir Next;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.subtext {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #999999;
 }
 
 .partImg {
@@ -9,15 +32,24 @@
 .imgOutline {
   border: 1px solid lightgray;
   border-radius: 15px;
-  width: 80px;
-  height: 80px;
+  padding: 5px;
 }
 
 .container {
   display: flex;
   flex-flow: row;
+  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.col-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 25% auto
 }
 
 .row-container {
@@ -25,4 +57,54 @@
     flex-flow: row;
     justify-content: left;
     flex-wrap: wrap;
-  }
+}
+
+.text {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.example-form {
+  margin-top: 30px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.bike {
+  width: 100px;
+}
+
+.compatible {
+  color: #4bd493;
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+
+
+
+.non-compatible {
+  color: #f55757;
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+}

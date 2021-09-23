@@ -25,6 +25,8 @@ export class PartComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(ModalComponent, {
+      width: "50%",
+      height: "500px",
       data: {part : this.part}
     });
 

@@ -1,10 +1,87 @@
 <mat-dialog-content *ngIf="data.part" class="mat-typography">
-  <h3 class="title">Add to Bicycle</h3>
-  <p class="subtext">Search and select a bicycle to add this part to.</p>
-  <div class="row-container">
-    <div class="imgOutline container">
-      <img class="partImg" src="{{ data.part.images[0].path }}" alt="image" />
+  <div class="margins col-container" *ngIf="added">
+    <img
+      matPrefix
+      class="icon"
+      src="/assets/icons8-checkmark-yes-32.png"
+      width="50px"
+      height="50px"
+    />
+    <p class="title">
+      Part Added Successfully!
+    </p>
+    <p class="subtext">
+      Search and select a vehicle to add this part to.
+    </p>
+  </div>
+  <div class="margins" *ngIf="!added">
+    <h3 class="title">Add to Bicycle</h3>
+    <p class="subtext">Search and select a bicycle to add this part to.</p>
+    <div class="row-container">
+      <div class="imgOutline">
+        <img class="partImg" src="{{ data.part.images[0].path }}" alt="image" />
+      </div>
+      <p class="text">{{ data.part.name }}</p>
     </div>
-    <p class="text">{{ data.part.name }}</p>
+    <mat-form-field class="example-full-width example-form" appearance="fill">
+      <img
+        matPrefix
+        class="icon"
+        src="/assets/icons8-search.svg"
+        width="24px"
+        height="24px"
+      />
+      <mat-label>Search by type, year, name, etc.</mat-label>
+      <input
+        type="text"
+        aria-label="Number"
+        matInput
+        [(ngModel)]="value"
+        (input)="setValueAndFilter($event)"
+      />
+    </mat-form-field>
+    <div *ngIf="value.length !== 0">
+      <div class="row-container" *ngFor="let bike of filteredBicycles">
+        <div class="imgOutline">
+          <img class="bike" src="{{ bike.images[0] }}" alt="image" />
+        </div>
+        <div class="text">{{ bike.name }}</div>
+        <div *ngIf="isCompatible(data.part, bike)" class="compatible container">
+          <img
+            matPrefix
+            class="icon"
+            src="/assets/icons8-checkmark-yes-32.png"
+            width="23px"
+            height="23px"
+          />
+          <div style="margin-right: 10px">compatible</div>
+          <img
+            *ngIf="isCompatible(data.part, bike)"
+            matPrefix
+            class="icon"
+            src="/assets/add_circle_outline_black.svg"
+            width="23px"
+            height="23px"
+            (click)="addPartToBicycle(bike)"
+          />
+        </div>
+        <div
+          *ngIf="!isCompatible(data.part, bike)"
+          class="non-compatible container"
+        >
+          <img
+            matPrefix
+            class="icon"
+            src="/assets/icons8-xbox-x-32.png"
+            width="23px"
+            height="23px"
+          />
+          non-compatible
+        </div>
+      </div>
+    </div>
+    <div *ngIf="value == ''" class="text container" style="margin: 70px 70px">
+      Search to Find Results
+    </div>
   </div>
 </mat-dialog-content>

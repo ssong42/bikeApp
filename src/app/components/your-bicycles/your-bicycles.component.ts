@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Bicycles } from 'src/app/mock-bicycles';
+import { Bicycle } from 'src/app/mock-bicycles';
 import { BicyclesService } from 'src/app/services/bicycles.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { BicyclesService } from 'src/app/services/bicycles.service';
   styleUrls: ['./your-bicycles.component.css']
 })
 export class YourBicyclesComponent implements OnInit {
-  yourBicycles$: Observable<Bicycles[]>;
+  yourBicycles$: Observable<Bicycle[]>;
   
   constructor(private router: Router, private bicyclesService: BicyclesService) { 
     this.yourBicycles$ = this.bicyclesService.bicycles$;

@@ -9,6 +9,10 @@ h2 {
   margin-bottom: 10px;
 }
 
+mat-slider {
+  width: 300px;
+}
+
 a {
   font-family: Avenir Next;
   font-size: 12px;
