@@ -15,7 +15,7 @@ export class BicycleOverviewComponent implements OnInit {
   bikeParts: Part[] = [];
   bicycle: any;
   bicycles: Bicycle[] = [];
-  bicycleId: number = 1;
+  bicycleId: string = "";
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +28,7 @@ export class BicycleOverviewComponent implements OnInit {
       this.bicycleId = params['id'];
     });
 
+    console.log(this.bicycleId);
     this.bicyclesService.bicycles$.subscribe((data: Bicycle[]) => {
       //find the bicycle from bicycles list
       this.bicycle = data.find(
@@ -40,10 +41,10 @@ export class BicycleOverviewComponent implements OnInit {
   findBikeParts(): void {
     this.partService.parts$.subscribe((data: Part[]) => {
       this.parts = data;
-
       // find the parts for the bicycle
       this.bikeParts = this.parts.filter((p) => {
-        if (this.bicycle.parts.find((pp: Part) => pp.id == p.id)) return true;
+        if (this.bicycle.parts.find((pp: Part) => {return pp.id == p.id})) 
+          return true;
         return false;
       });
     });

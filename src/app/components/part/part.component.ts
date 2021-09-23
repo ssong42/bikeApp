@@ -14,7 +14,7 @@ import { ModalComponent} from '../modal/modal.component'
 export class PartComponent implements OnInit {
   parts: Part[] = [];
   part: any = {};
-  partId = 1;
+  partId = "1";
 
   constructor(private route: ActivatedRoute, public dialog: MatDialog, private partService: PartsService) {  }
 
