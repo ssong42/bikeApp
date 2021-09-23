@@ -33,8 +33,11 @@ export class BicycleOverviewComponent implements OnInit {
       this.bicycle = data.find(
         (bike: Bicycle) => bike.id == this.bicycleId
       );
+      this.findBikeParts();
     });
+  }
 
+  findBikeParts(): void {
     this.partService.parts$.subscribe((data: Part[]) => {
       this.parts = data;
 
