@@ -1,5 +1,5 @@
 export interface Bicycle {
-    _id: string,
+    id: number,
     name: string,
     images: any[],
     parts: any[]

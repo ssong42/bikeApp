@@ -44,7 +44,7 @@ export class ModalComponent implements OnInit {
 
   isCompatible(part: Part, bike: Bicycle): number {
     return part.compatibleBikes.filter((cBike: Bicycle) => {
-      return cBike._id == bike._id;
+      return cBike.id == bike.id;
     })
     .length;
   }

@@ -7,7 +7,7 @@ import { Part } from '../mock-parts';
   providedIn: 'root',
 })
 export class PartsService {
-  private apiUrl = 'http://localhost:3001/parts';
+  private apiUrl = 'http://localhost:3000/parts';
   private parts = new BehaviorSubject<any>([]);
   public parts$ = this.parts.asObservable();
 
