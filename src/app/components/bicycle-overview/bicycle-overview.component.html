@@ -1,1 +1,18 @@
-<p>bicycle-overview works!</p>
+<div class="margins row-container">
+  <div class="collage">
+    <img src={{bicycle.images[0]}} class="image" width="100%" />
+    <img src={{bicycle.images[1]}} class="image" width="49%"/>
+    <img src={{bicycle.images[2]}} class="image" width="49%"/>
+  </div>
+  <div class="parts">
+    <p class="title">{{ bicycle.name }}</p>
+    <p class="subtext">Installed Parts</p>
+    <hr class="solid" />
+    <div class="row-container " *ngFor="let bikePart of bikeParts">
+      <div class="partImage">
+        <img class="partImg" src="{{ bikePart.images[0].path }}" alt="image" />
+      </div>
+      <p class="text">{{ bikePart.name }}</p>
+    </div>
+  </div>
+</div>

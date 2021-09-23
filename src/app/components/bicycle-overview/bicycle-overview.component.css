@@ -1,0 +1,79 @@
+.margins {
+    margin-top: 15px;
+    padding: 0 3%;
+    background-color: #E5E5E5;
+    height: 100%
+  }
+
+  .row-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.collage {
+  width: 45%;
+  margin: 2%;
+}
+
+.image {
+  margin: 0 3px;
+}
+
+.title {
+  font-family: Avenir Next;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-top: 20px;
+  margin: 3%
+}
+
+.subtext {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 5px 0 15px 3%
+}
+
+
+.text {
+  font-family: Avenir Next;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.partImg {
+  width: 70px;
+}
+
+  /* Solid border */
+  hr.solid {
+    border-bottom: 1px solid #bbb;
+    margin: 0 3% 25px 3%;
+  }
+
+  .parts {
+    margin: 2%;
+    width: 30%;
+    background-color: white;
+    box-shadow: 1px 1px 2px darkgrey;
+  }
+
+  .partImage {
+    margin: 3%;
+  }
