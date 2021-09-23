@@ -7,7 +7,7 @@ import { Bicycle } from '../mock-bicycles';
   providedIn: 'root'
 })
 export class BicyclesService {
-  private apiUrl = "http://localhost:3000/bicycles";
+  private apiUrl = "http://localhost:3001/bicycles";
   private bicycles = new BehaviorSubject<Bicycle[]>([]);
   public bicycles$ = this.bicycles.asObservable();
 
@@ -20,7 +20,7 @@ export class BicyclesService {
   }
 
   updateBicycle(bike: Bicycle): void {
-    const putApiUrl = `http://localhost:3000/bicycles/${bike.id}`;
+    const putApiUrl = `http://localhost:3000/bicycles/${bike._id}`;
 
     this.http.put<Bicycle>(putApiUrl, bike).subscribe(() => {
       this.loadBicycles();

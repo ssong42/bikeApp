@@ -17,9 +17,11 @@ export class YourBicyclesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.yourBicycles$);
   }
   
   hasRoute(route: String) {
     return this.router.url == route;
   }
+
 }

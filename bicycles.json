@@ -1,0 +1,30 @@
+[
+      {
+        "id": "1",
+        "name": "Bicycle A",
+        "images": [
+          "/assets/yourBike1.png",
+          "/assets/Supra2.svg",
+          "/assets/Supra3.svg"
+        ],
+        "parts": [
+          {
+            "id": 1
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Bicycle B",
+        "images": [
+          "/assets/yourBike2.png",
+          "/assets/YamahaR62.svg",
+          "/assets/YamahaR63.svg"
+        ],
+        "parts": [
+          {
+            "id": 2
+          }
+        ]
+      }
+    ]

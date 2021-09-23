@@ -3,7 +3,7 @@
 <div class="container">
   <!-- render a list of images -->
   <div class="col-container" *ngFor="let bicycle of yourBicycles$ | async">
-    <a [routerLink]="['/yourBicycles', bicycle.id]" >
+    <a [routerLink]="['/yourBicycles', bicycle._id]" >
       <img class="bikeImg" src="{{ bicycle.images[0] }}" alt="image" />
     </a>
       <p class="text">{{ bicycle.name }}</p>
