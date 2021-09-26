@@ -1,6 +1,6 @@
 <div class="container">
   <div class="item">
-    <app-carousel [slides]="part.images"></app-carousel>
+    <app-carousel *ngIf="part.images" [slides]="part.images"></app-carousel>
   </div>
   <div class="item">
     <h3 class="title">{{ part.name }}</h3>

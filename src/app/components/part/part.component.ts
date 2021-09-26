@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { Bicycle } from 'src/app/mock-bicycles';
-import { Part, parts } from 'src/app/mock-parts';
+import { Part } from 'src/app/mock-parts';
 import { PartsService } from 'src/app/services/parts.service';
 import { ModalComponent} from '../modal/modal.component'
 
@@ -26,9 +25,9 @@ export class PartComponent implements OnInit {
     this.partService.parts$.subscribe(
       (data: Part[]) => {
         this.parts = data;
+        this.part = this.parts.find((part) => part.id == this.partId);
       }
     );
-    this.part = parts.find((part) => part.id == this.partId);
   }
 
   openDialog() {
@@ -41,5 +40,9 @@ export class PartComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  findPart() {
+    this.part = this.parts.find((part) => part.id == this.partId);
   }
 }

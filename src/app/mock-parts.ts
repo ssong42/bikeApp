@@ -22,5 +22,5 @@ export const parts: Part[] = [
         6062 premium butted aluminum, high-strength design. 
         Short reach for optimal brake/shift control.
         Shallow Bend Drop: 125mm drop x 65mm reach`, 
-        compatibleBikes: [{_id: 2, name: "Bicycle B"}],
+        compatibleBikes: [{id: 2, name: "Bicycle B"}],
     }]
