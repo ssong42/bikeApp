@@ -22,8 +22,9 @@ import { BicycleOverviewComponent } from './components/bicycle-overview/bicycle-
 import { ImageListComponent } from './components/image-list/image-list.component';
 import { PartComponent } from './components/part/part.component';
 import { ButtonComponent } from './components/button/button.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { PartsAddModalComponent } from './components/parts-add-modal/parts-add-modal.component';
+import { PartsViewModalComponent } from './components/parts-view-modal/parts-view-modal.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,8 +45,9 @@ const appRoutes: Routes = [
     ImageListComponent,
     PartComponent,
     ButtonComponent,
-    ModalComponent,
     CarouselComponent,
+    PartsAddModalComponent,
+    PartsViewModalComponent,
   ],
   imports: [
     BrowserModule,

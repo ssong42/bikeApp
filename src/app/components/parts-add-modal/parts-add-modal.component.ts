@@ -4,17 +4,12 @@ import { BicyclesService } from 'src/app/services/bicycles.service';
 import { Bicycle } from 'src/app/mock-bicycles';
 import { Part } from 'src/app/mock-parts';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css'],
+  selector: 'parts-add-modal',
+  templateUrl: './parts-add-modal.component.html',
+  styleUrls: ['./parts-add-modal.component.css'],
 })
-export class ModalComponent implements OnInit {
+export class PartsAddModalComponent implements OnInit {
   allBicycles: Bicycle[] = [];
   filteredBicycles: Bicycle[] = [];
   value = '';

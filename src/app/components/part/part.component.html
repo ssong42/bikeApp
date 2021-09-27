@@ -1,13 +1,13 @@
 <div class="container">
   <div class="item">
-    <app-carousel *ngIf="part.images" [slides]="part.images"></app-carousel>
+    <app-carousel *ngIf="part.images" [slides]="part.images" (onImgClick)="openViewDialog($event)"></app-carousel>
   </div>
   <div class="item">
     <h3 class="title">{{ part.name }}</h3>
     <app-button
       color="#36A0ED"
       text="Add To Vehicle"
-      (click)="openDialog()"
+      (click)="openAddDialog()"
     ></app-button>
     <hr class="solid" />
     <p class="description">{{ part.description }}</p>

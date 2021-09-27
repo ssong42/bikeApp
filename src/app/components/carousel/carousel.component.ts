@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { trigger, transition, style, animate } from "@angular/animations";
 
 @Component({
@@ -6,19 +6,14 @@ import { trigger, transition, style, animate } from "@angular/animations";
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
   animations: [
-    trigger('carouselAnimation', [
-      transition('void => *', [
-        style({ opacity: 0 }),
-        animate('300ms', style({ opacity: 1 }))
-      ]),
-      transition('* => void', [
-        animate('300ms', style({ opacity: 0 }))
-      ])
-    ])
   ]
 })
 export class CarouselComponent implements OnInit {
   @Input() slides: any;
+  @Input() whiteArrows: boolean = false;
+  @Input() classes: string = "";
+  @Output()
+  onImgClick = new EventEmitter();
 
   ngOnInit(): void {
   }
@@ -37,5 +32,13 @@ export class CarouselComponent implements OnInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
     console.log("next clicked, new current slide is: ", this.currentSlide);
+  }
+
+  imgClick(image: any) {
+    this.onImgClick.emit(image);
+  }
+
+  subImgClick(index: number) {
+    this.currentSlide = index;
   }
 }

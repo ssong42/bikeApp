@@ -3,7 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Part } from 'src/app/mock-parts';
 import { PartsService } from 'src/app/services/parts.service';
-import { ModalComponent} from '../modal/modal.component'
+import { PartsAddModalComponent} from '../parts-add-modal/parts-add-modal.component'
+import { PartsViewModalComponent } from '../parts-view-modal/parts-view-modal.component';
 
 @Component({
   selector: 'app-part',
@@ -30,8 +31,8 @@ export class PartComponent implements OnInit {
     );
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(ModalComponent, {
+  openAddDialog() {
+    const dialogRef = this.dialog.open(PartsAddModalComponent, {
       width: "50%",
       height: "500px",
       data: {part : this.part}
@@ -42,7 +43,17 @@ export class PartComponent implements OnInit {
     });
   }
 
-  findPart() {
-    this.part = this.parts.find((part) => part.id == this.partId);
+  openViewDialog($event: any) {
+
+    const dialogRef = this.dialog.open(PartsViewModalComponent, {
+      width: "50%",
+      height: "500px",
+      data: {images: this.part.images, selectedImage: $event},
+      panelClass: "transparent"
+    })
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }

@@ -1,32 +1,38 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 /* You can add global styles to this file, and also import other style files */
 body {
-    margin: 0
+  margin: 0;
 }
 
 .flex-container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .flex-item {
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    line-height: 150px;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-  }
-  
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .btn {
   display: inline-block;
@@ -44,7 +50,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   line-height: 19px;
   letter-spacing: 0em;
   text-align: center;
-  
 }
 .btn:focus {
   outline: none;
@@ -56,4 +61,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .btn-block {
   display: block;
   width: 100%;
+}
+
+.transparent mat-dialog-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  padding: 0px 0px 0px 0px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
 }

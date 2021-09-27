@@ -1,0 +1,8 @@
+<mat-dialog-content class="mat-typography">
+  <app-carousel
+    *ngIf="data.images"
+    [slides]="data.images"
+    [whiteArrows]="true"
+    [classes]="'margins'"
+  ></app-carousel>
+</mat-dialog-content>

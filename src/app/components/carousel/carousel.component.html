@@ -1,19 +1,30 @@
 <!-- carousel -->
 <div class="carousel">
     <ng-container *ngFor="let slide of slides; let i = index">
-      <img
+        <img
         *ngIf="i === currentSlide"
         [src]="slide.path"
         class="slide"
-        @carouselAnimation
-      />
+        (click)="imgClick(slide)"
+        />
     </ng-container>
-  
+
+    <!-- sub images -->
+    <div class="container">
+        <img
+        *ngFor="let slide of slides; let i = index"
+        [src]="slide.path"
+        class="sub-images {{i === currentSlide ? 'selected' : 'greyed'}}"
+        (click)="subImgClick(i)"
+        />
+    </div>
+
     <!-- controls -->
-    <button class="control prev" (click)="onPreviousClick()">
-      <span class="arrow left"></span>
+    <button *ngIf="currentSlide === (slides.length - 1)" class="control prev" (click)="onPreviousClick()">
+      <span class="left {{ whiteArrows ? 'whiteArrow' : 'greyArrow' }}"></span>
     </button>
-    <button class="control next" (click)="onNextClick()">
-      <span class="arrow right"></span>
+    <button *ngIf="currentSlide === 0" class="control next" (click)="onNextClick()">
+      <span class="right {{ whiteArrows ? 'whiteArrow' : 'greyArrow' }}"></span>
     </button>
+
   </div>
